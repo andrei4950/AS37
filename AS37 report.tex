@@ -79,12 +79,26 @@ which relates the pressure $P$ to the energy density $\rho c^2$. $w$ is a consta
 
 \section{Results}
 \subsection{Linear fit}
+We start with the simplest model, the one originally proposed by Edwin Hubble, which predicts a linear relation between the speed and distance of the observed stars. Since the apparent brightness of stars will decrease according to the inverse square law $S \propto d^{-2}$, we expect the slope of the linear fit to be $5$. This is because we are measuring brightness on the magnitude scale.
+\begin{equation}
+	m = -2.5\log_{10}\frac{S}{S_0}
+	\label{eq:mag}
+\end{equation}
+where $m$ is the magnitude and  $S$ is the apparent brightness. Note that due to the minus sign, fainter objects have higher magnitudes. 
+
+We fit the data with a linear $y = a + bx$ fit. We consider the parameter $a$ "uninteresting", meaning that we allow it to vary while fitting for $b$. We find the slope to be: 
+\begin{equation}
+	b = 5.50^{5.53}_{5.48}
+	\label{res:lin}
+\end{equation}
+The linear fit has a slope clearly different than $5$, which shows that this simple model does not adequately capture the physics at play. In figure \ref{fig:snls} we plot the dataset and the linear fit, together with the $b = 5$ linear fit. 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{snls.png}
 	\caption{Type Ia supernovae data from the Supernovae Legacy Survey plotted on a Hubble diagram}
 	\label{fig:snls}
 \end{figure}
+We also investigate if this simple model can be a good fit for a range of the data containing only the low redshift datapoints. Analysis of the $\chi^2$ value shows that the linear model breakes down after the first 43 data points, corresponding to a redshift of around $\log_{10}z = -0.95$. 
 
 \subsection{Flat universe model}
 
