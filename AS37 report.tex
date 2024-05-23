@@ -38,26 +38,49 @@
 %-------------------------------------------------------------------
 
 \begin{abstract}
-Here goes abstract 
+This report presents how we can use the "Hubble diagram" of a sample of 115 type Ia supernovae to show that the universe is expanding. We also show that the data is inconsistent with a flat universe. By combining this data with WMAP data we can also show that the universe expantion is accelerating. 
 \end{abstract}
 
 %-------------------------------------------------------------------
 
 \section{Introduction}
-here introduction
+In this report we show how type Ia supernovae can be used as "standard candles", since we predict they explode at roughly the same mass, with the same brightness. This allows us to calculate the distance to the star. The speed of these stars relative to Earth is extracted from the red-shift of the light emitted caused by the Doppler Effect. The plot of the speed (or redness) versus time is called a Hubble diagram, after Edwin Hubble, who discovered that there is a linear dependence between the distance to a star and its velocity. 
+
+The data we are analysing consists of the measured redshift and brightness value and its error for 115 supernovae from the "Supernovae Legacy Survey" \cite{SN_legacy_survey}. 
 
 
 \section{Methods}
-
+In this experiment we assume that the universe is uniform and isotropic \cite{AS37_lab_script}, which allows us to write the Friedmann equation: 
+\begin{equation}
+	H^2(a) = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8 \pi G \rho}{3} - \frac{kc^2}{a^2} + \frac{\Lambda}{3}
+\end{equation}
 
 \section{Results}
 \subsection{Linear fit}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{snls.png}
+	\caption{Type Ia supernovae data from the Supernovae Legacy Survey plotted on a Hubble diagram}
+	\label{fig:snls}
+\end{figure}
 
 \subsection{Flat universe model}
 
 \subsection{Non-flat universe models}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{nonflat.png}
+	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
+	\label{fig:nonflat}
+\end{figure}
 
 \subsection{Dark energy models}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{dark.png}
+	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
+	\label{fig:dark}
+\end{figure}
 
 \section{Conclusions and further work}
 
