@@ -50,10 +50,32 @@ The data we are analysing consists of the measured redshift and brightness value
 
 
 \section{Methods}
+\subsection{Friedmann equation}
 In this experiment we assume that the universe is uniform and isotropic \cite{AS37_lab_script}, which allows us to write the Friedmann equation: 
 \begin{equation}
 	H^2(a) = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8 \pi G \rho}{3} - \frac{kc^2}{a^2} + \frac{\Lambda}{3}
+	\label{eq:Friedmann}
 \end{equation}
+where $H(a)$ is the hubble parameter, $a$ is the scale factor, which is defined as 1 at the present time, $\rho$ is the density (due to matter and radiation), $k$ defines the geometry of the space ($k=0$ for a flat universe), and $\Lambda$ is the cosmological constant. We devide equation \eqref{eq:Friedmann} by $H^2$ to find the simplified relation: 
+\begin{equation}
+	1 = \Omega_M +\Omega_k + \Omega_\Lambda
+	\label{eq:main}
+\end{equation}
+
+\subsection{Flat universe}
+It can be easily seen that if the universe is flat ($k = 0$), meaning that Euclidian geometry applies, or equivalently the angles of any triangle with the sides defined by light rays add up to $180^\circ$, then: 
+\begin{equation}
+	\Omega_M + \Omega_\Lambda = 1
+	\label{eq:flat}
+\end{equation}
+
+\subsection{Dark energy}
+The cosmological constant is a special case of a more general class of models called "dark energy" models. These models are characterised by the equation of state:
+\begin{equation}
+	P = w \rho c^2
+	\label{eq:dark}
+\end{equation}
+which relates the pressure $P$ to the energy density $\rho c^2$. $w$ is a constant which is $w = -1$ for the special case of the Cosmological Constant. Also, the value $w = 0$ corresponds to normal matter. therefore we shouldn't try to fit $w = 0$ to the data since we are already accounting for normal matter with the $\Omega_M$ term. 
 
 \section{Results}
 \subsection{Linear fit}
