@@ -38,7 +38,7 @@
 %-------------------------------------------------------------------
 
 \begin{abstract}
-This report presents how we can use the "Hubble diagram" of a sample of 115 type Ia supernovae to show that the universe is expanding. We also show that the data is inconsistent with a flat universe. By combining this data with WMAP data we can also show that the universe expantion is accelerating. 
+This report presents how we can use the "Hubble diagram" of a sample of 115 type Ia supernovae from the Supernova Legacy Survey to show that the universe is expanding. We also show that the data is inconsistent with a flat universe. By combining this data with WMAP data we can also show that the universe expantion is accelerating. 
 \end{abstract}
 
 %-------------------------------------------------------------------
@@ -77,6 +77,9 @@ The cosmological constant is a special case of a more general class of models ca
 \end{equation}
 which relates the pressure $P$ to the energy density $\rho c^2$. $w$ is a constant which is $w = -1$ for the special case of the Cosmological Constant. Also, the value $w = 0$ corresponds to normal matter. therefore we shouldn't try to fit $w = 0$ to the data since we are already accounting for normal matter with the $\Omega_M$ term. 
 
+\subsection{The cosmological model}
+There was another custom fitting model added to the qdp software: the "cosm" model which fits a Friedmann model to the data. This model has four parameters: the absolute magnitude to the Type 1a supernovae $AbsMag$, $\Omega_{M,0}$, $\Omega_{T,0} = \Omega_{M,0} + \Omega_{\Lambda,0}$ and the dark energy equation of state parameter $w$.
+
 \section{Results}
 \subsection{Linear fit}
 We start with the simplest model, the one originally proposed by Edwin Hubble, which predicts a linear relation between the speed and distance of the observed stars. Since the apparent brightness of stars will decrease according to the inverse square law $S \propto d^{-2}$, we expect the slope of the linear fit to be $5$. This is because we are measuring brightness on the magnitude scale.
@@ -88,7 +91,9 @@ where $m$ is the magnitude and  $S$ is the apparent brightness. Note that due to
 
 We fit the data with a linear $y = a + bx$ fit. We consider the parameter $a$ "uninteresting", meaning that we allow it to vary while fitting for $b$. We find the slope to be: 
 \begin{equation}
-	b = 5.50^{5.53}_{5.48}
+	b = 5.50^{5.53}_{5.48} 
+	\hspace{2cm}
+	\chi^2 = 139.6
 	\label{res:lin}
 \end{equation}
 The linear fit has a slope clearly different than $5$, which shows that this simple model does not adequately capture the physics at play. In figure \ref{fig:snls} we plot the dataset and the linear fit, together with the $b = 5$ linear fit. 
@@ -100,21 +105,53 @@ The linear fit has a slope clearly different than $5$, which shows that this sim
 \end{figure}
 We also investigate if this simple model can be a good fit for a range of the data containing only the low redshift datapoints. Analysis of the $\chi^2$ value shows that the linear model breakes down after the first 43 data points, corresponding to a redshift of around $\log_{10}z = -0.95$. 
 
-\subsection{Flat universe model}
+\subsection{Flat universe model} \label{sec:flat}
+As stated before, we model a flat universe by setting $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$. We are also using the Cosmological Constant (set $w = -1$), which leaves  $\Omega_{M,0}$ and $AbsMag$ as the parameters to be fitted. We find: 
+\begin{equation}
+	\Omega_{M,0} = 0.26^{0.30}_{0.22} 
+	\hspace{2cm}
+	AbsMag = -19.247
+	\hspace{2cm}
+	\chi^2 = 110.9
+	\label{res:flatM}
+\end{equation}
+Note that we did not investigate what is the $1\sigma$ confidence interval for the absolute magnitude of the SNe, since this is not the parameter we are interested in. Using equation \eqref{eq:flat} we find: 
+\begin{equation}
+	\Omega_{\Lambda,0} = 0.74^{0.88}_{0.70} 
+	\label{res:flatL}
+\end{equation}
+
+MAYBE SAY THAT WE CHECKED THAT OMEGA INCREADES QUADRATICALLY
+%If the uncertainties on the Hubble diagram are normally-distributed, the plot of χ2 v. parameter value should have a quadratic form. Try fitting a quadratic function to the plot using the standard model options in qdp (type mo to see the names of the model components that you can use, hint: you will need to use three components simultaneously to fit a quadratic function). Note that we don’t have uncertainties for the χ2 values themselves, so the goodness-of-fit returned by qdp in this case is meaningless - we just want a visual inspection to check things look sensible.
+
+
 
 \subsection{Non-flat universe models}
+We now turn to non-flat universe geometries ($\Omega_{TOT,0} $ is a free parameter), but still use the cosmological constant ($w = -1$). We find that we can not fit a single set of $\Omega_{M,0}$ and $\Omega_{\Lambda,0}$ to the data; there is a range of values that fit the data well (Figure \ref{fig:nonflat}). 
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{nonflat.png}
-	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
+	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$. The pair ($\Omega_\Lambda, \Omega_M$) can not be determined uniquely using only theSupernova Legacy Survey data.}
 	\label{fig:nonflat}
 \end{figure}
 
 \subsection{Dark energy models}
+When fitting for dark energy models there are two "interesting" parameters that we are manually fitting for: $\Omega_{M,0}$ and $w$. This means that it is necessary to also assume that the universe is flat, since we can not fit all four parameters at the same time. This is because the parameters are degenerate with each other. But instead of directly fixing $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$, we can use the data from the microwave bacground observations, to further constrain the fit. The WMAP data predicts:
+\begin{equation}
+	\Omega_{k,0} = -0.014 \pm 0.017
+	\label{res:WMAP}
+\end{equation}
+We obtain a very similar result to the one obtained in section \ref{sec:flat}, but the error bars are slightly bigger: 
+\begin{equation}
+	\Omega_{M,0} = 0.28 \pm 0.1
+	\hspace{2cm}
+	\Omega_{\Lambda,0} = 0.74 \pm 0.1
+	\label{res:dark}
+\end{equation}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{dark.png}
-	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
+	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
 	\label{fig:dark}
 \end{figure}
 
