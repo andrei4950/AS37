@@ -38,7 +38,7 @@
 %-------------------------------------------------------------------
 
 \begin{abstract}
-In this experiment we use a sample of 115 type Ia supernovae from the Supernova Legacy Survey to show that the universe is expanding. We try fitting different models, finding that a flat universe is consistent with the data. Even though the SNLS does not rule out non-flat models, independent microwave background measurements strongly suggest a flat universe. By combining the SNLS data with WMAP data we can also show that the universe expantion is accelerating (p value of $3.2 \times 10^{-5}$). 
+In this experiment we use a sample of 115 type Ia supernovae from the Supernova Legacy Survey to show that the universe is expanding. We try fitting different models, finding that a flat universe is consistent with the data. Even though the SNLS does not rule out non-flat models, independent microwave background measurements strongly suggest a flat universe. By combining the SNLS data with WMAP data we can also show that the universe expansion is accelerating (p value of $3.2 \times 10^{-5}$). 
 \end{abstract}
 
 %-------------------------------------------------------------------
@@ -53,19 +53,19 @@ The data we are analysing consists of the measured redshift and brightness value
 \subsection{Friedmann equation}
 In this experiment we assume that the universe is uniform and isotropic \cite{AS37_lab_script}, which allows us to write the Friedmann equation: 
 \begin{equation}
-	H^2(a) = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8 \pi G \rho}{3} - \frac{kc^2}{a^2} + \frac{\Lambda}{3}
+	H^2(a) = \left( \frac{\dot{a}}{a} \right)^2 = \frac{8 \pi G \rho}{3} - \frac{k c^2}{a^2} + \frac{\Lambda}{3}
 	\label{eq:Friedmann}
 \end{equation}
-where $H(a)$ is the hubble parameter, $a$ is the scale factor, which is defined as 1 at the present time, $\rho$ is the density (due to matter and radiation), $k$ defines the geometry of the space ($k=0$ for a flat universe), and $\Lambda$ is the cosmological constant. We devide equation \eqref{eq:Friedmann} by $H^2$ to find the simplified relation: 
+where $H(a)$ is the Hubble parameter, $a$ is the scale factor, which is defined as 1 at the present time, $\rho$ is the density (due to matter and radiation), $k$ defines the geometry of the space ($k=0$ for a flat universe), and $\Lambda$ is the cosmological constant. We divide equation \eqref{eq:Friedmann} by $H^2$ to find the simplified relation: 
 \begin{equation}
 	1 = \Omega_M +\Omega_k + \Omega_\Lambda
 	\label{eq:main}
 \end{equation}
-Note that we can use the Friedmann equation to thetermine if the universe's expantion is accelerating or decelerating. By multiplying equation \eqref{eq:Frierdmann} by $a^2$ and then differentiating we obtain: 
+Note that we can use the Friedmann equation to determine if the universe's expansion is accelerating or decelerating. By multiplying equation \eqref{eq:Friedmann} by $a^2$ and then differentiating we obtain: 
 \begin{equation}
 	2 \ddot{a} \dot{a} = -\frac{8 \pi G M}{3 a^2} \dot{a} + \frac{\Lambda 2 a}{3}  \dot{a}
 \end{equation}
-where we used $\rho = M/a^3$ for the denssity of matter. We can simplify and identify the terms from equation \eqref{eq:main}:
+where we used $\rho = M/a^3$ for the density of matter. We can simplify and identify the terms from equation \eqref{eq:main}:
 \begin{equation}
 	\ddot{a} = -\frac{\Omega_M H^2}{2 a^2} + \Omega_{\Lambda} H^2 a
 \end{equation}
@@ -102,7 +102,7 @@ We start with the simplest model, the one originally proposed by Edwin Hubble, w
 \end{equation}
 where $m$ is the magnitude and  $S$ is the apparent brightness. Note that due to the minus sign, fainter objects have higher magnitudes. 
 
-We fit the data with a linear $y = a + bx$ fit. We consider the parameter $a$ "uninteresting", meaning that we allow it to vary while fitting for $b$. We find the slope to be: 
+We fit the data with a linear $y = a + b x$ fit. We consider the parameter $a$ "uninteresting", meaning that we allow it to vary while fitting for $b$. We find the slope to be: 
 \begin{equation}
 	b = 5.50^{5.53}_{5.48} 
 	\hspace{2cm}
@@ -116,7 +116,7 @@ The linear fit has a slope clearly different than $5$, which shows that this sim
 	\caption{Type Ia supernovae data from the Supernovae Legacy Survey plotted on a Hubble diagram}
 	\label{fig:snls}
 \end{figure}
-We also investigate if this simple model can be a good fit for a range of the data containing only the low redshift datapoints. Analysis of the $\chi^2$ value shows that the linear model breakes down after the first 43 data points, corresponding to a redshift of around $\log_{10}z = -0.95$. 
+We also investigate if this simple model can be a good fit for a range of the data containing only the low redshift datapoints. Analysis of the $\chi^2$ value shows that the linear model breaks down after the first 43 data points, corresponding to a redshift of around $\log_{10}z = -0.95$. 
 
 \subsection{Flat universe model} \label{sec:flat}
 As stated before, we model a flat universe by setting $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$. We are also using the Cosmological Constant (set $w = -1$), which leaves  $\Omega_{M,0}$ and $AbsMag$ as the parameters to be fitted. We find: 
@@ -134,7 +134,7 @@ Note that we did not investigate what is the $1\sigma$ confidence interval for t
 	\label{res:flatL}
 \end{equation}
 
-MAYBE SAY THAT WE CHECKED THAT OMEGA INCREADES QUADRATICALLY
+MAYBE SAY THAT WE CHECKED THAT OMEGA INCREASES QUADRATICALLY
 %If the uncertainties on the Hubble diagram are normally-distributed, the plot of χ2 v. parameter value should have a quadratic form. Try fitting a quadratic function to the plot using the standard model options in qdp (type mo to see the names of the model components that you can use, hint: you will need to use three components simultaneously to fit a quadratic function). Note that we don’t have uncertainties for the χ2 values themselves, so the goodness-of-fit returned by qdp in this case is meaningless - we just want a visual inspection to check things look sensible.
 
 
@@ -149,9 +149,14 @@ We now turn to non-flat universe geometries ($\Omega_{TOT,0} $ is a free paramet
 \end{figure}
 
 \subsection{Dark energy models}
-When fitting for dark energy models there are two "interesting" parameters that we are manually fitting for: $\Omega_{M,0}$ and $w$. The four parameters are degenerate with each other, meaning that we can not fit all four parameters at the same time. 
+The four parameters our model uses are degenerate with each other, meaning that we can not fit all four parameters at the same time. We start by assuming a flat universe, which allows us to fix $\Omega_{TOT,0} = 0$. We are interested in $w$:
+\begin{equation}
+	w= -1.07^{-0.62}_{-1.67}
+	\label{res:w}
+\end{equation}
+This is consistent with the cosmological constant, but the confidence interval is large, and thus we can not yet exclude the possibility of $w \neq -1$.
 
-Instead of assuming that the universe is perfectly flat, and directly fixing $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$, we can use the data from the microwave bacground observations, to further constrain the fit. The WMAP data predicts:
+Instead of assuming that the universe is perfectly flat, and directly fixing $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$, we can use the data from the microwave background observations, to further constrain the fit. The WMAP data predicts:
 \begin{equation}
 	\Omega_{k,0} = -0.014 \pm 0.017
 	\label{res:WMAP}
@@ -169,16 +174,16 @@ which is consistent with a flat universe, but still allows for some uncertainty.
 	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
 	\label{fig:dark}
 \end{figure}
-We use this data to find if the universe expansion is accelerating or decelerating by substituting the results \eqref{res:dark} into equation \eqref{eq:exp}. Note that the errors on the $\Omega_{M,0}$ and $\Omega_{\Lambda,0}$ results are highly corelated (Figure \ref{fig:dark}, therefore we can not reasonably just add the confidence intervals in quadrature. Instead we find that: 
+We use this data to find if the universe expansion is accelerating or decelerating by substituting the results \eqref{res:dark} into equation \eqref{eq:exp}. Note that the errors on the $\Omega_{M,0}$ and $\Omega_{\Lambda,0}$ results are highly correlated (Figure \ref{fig:dark}, therefore we can not reasonably just add the confidence intervals in quadrature. Instead we find that: 
 \begin{equation}
 	\Omega_{\Lambda,0} - \frac{\Omega_{M,0}}{2} = 0.60 \pm 0.15
 \end{equation}
-This means that the hypotesys that the universe's expansion is not accelerating is $4 \sigma$ away from measurements, allowing us to state that the universe's expansion is accelerating with a confidence of $1-p = 0.99997$. 
+This means that the hypothesis that the universe's expansion is not accelerating is $4 \sigma$ away from measurements, allowing us to state that the universe's expansion is accelerating with a confidence of $1-p = 0.99997$. 
 
 \section{Conclusions and further work}
-In this experiment we showed how type Ia SNe can be used as "standard candles", allowing us to derive the distance to the supernovae. We can also use the redshift of the light coming from the SNe to determine their relative velocity to Earth. We showed that there is a range of cosmological parameters that fit this data well with a non-flat universe model. We also use an independent dataset of microwave background observations t determine that the universe is mostly flat. The combination of the two datasets allowa us to determine with $99.997\%$ confidence that the expansion of the universe is accelerating. 
+In this experiment we showed how type Ia SNe can be used as "standard candles", allowing us to derive the distance to the supernovae. We can also use the redshift of the light coming from the SNe to determine their relative velocity to Earth. We showed that there is a range of cosmological parameters that fit this data well with a non-flat universe model. We also use an independent dataset of microwave background observations t determine that the universe is mostly flat. The combination of the two datasets allows us to determine with $99.997\%$ confidence that the expansion of the universe is accelerating. 
 
-Future work could focus on refining the measurements of cosmological parameters by incorporating more recent and comprehensive datasets of type Ia supernovae. Additionally, improving the calibration of supernova luminosities and reducing systematic uncertainties will enhance the precision of distance measurements. Expanding the analysis to include data from other cosmological probes, such as baryon acoustic oscillations (BAO) and gravitational lensing, could provide a more robust understanding of the universe's expansion history. Such independent measurements would be highly valuabe in verifying the validity of the models presented in this report. 
+Future work could focus on refining the measurements of cosmological parameters by incorporating more recent and comprehensive datasets of type Ia supernovae. Additionally, improving the calibration of supernova luminosities and reducing systematic uncertainties will enhance the precision of distance measurements. Expanding the analysis to include data from other cosmological probes, such as baryon acoustic oscillations (BAO) and gravitational lensing, could provide a more robust understanding of the universe's expansion history. Such independent measurements would be highly valuable in verifying the validity of the models presented in this report. 
 
 \bibliographystyle{plain}
 \bibliography{bibliography}
