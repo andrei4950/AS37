@@ -38,7 +38,7 @@
 %-------------------------------------------------------------------
 
 \begin{abstract}
-This report presents how we can use the "Hubble diagram" of a sample of 115 type Ia supernovae from the Supernova Legacy Survey to show that the universe is expanding. We also show that the data is inconsistent with a flat universe. By combining this data with WMAP data we can also show that the universe expantion is accelerating. 
+This report presents how we can use the "Hubble diagram" of a sample of 115 type Ia supernovae from the Supernova Legacy Survey to show that the universe is expanding. By combining this data with WMAP data we can also show that the universe expantion is accelerating. 
 \end{abstract}
 
 %-------------------------------------------------------------------
@@ -60,6 +60,19 @@ where $H(a)$ is the hubble parameter, $a$ is the scale factor, which is defined 
 \begin{equation}
 	1 = \Omega_M +\Omega_k + \Omega_\Lambda
 	\label{eq:main}
+\end{equation}
+Note that we can use the Friedmann equation to thetermine if the universe's expantion is accelerating or decelerating. By multiplying equation \eqref{eq:Frierdmann} by $a^2$ and then differentiating we obtain: 
+\begin{equation}
+	2 \ddot{a} \dot{a} = -\frac{8 \pi G M}{3 a^2} \dot{a} + \frac{\Lambda 2 a}{3}  \dot{a}
+\end{equation}
+where we used $\rho = M/a^3$ for the denssity of matter. We can simplify and identify the terms from equation \eqref{eq:main}:
+\begin{equation}
+	\ddot{a} = -\frac{\Omega_M H^2}{2 a^2} + \Omega_{\Lambda} H^2 a
+\end{equation}
+For the present epoch, we have $a = 1$: 
+\begin{equation}
+	\ddot{a}_{\mathrm{present}} = H^2 \left(\Omega_{\Lambda,0} - \frac{\Omega_{M,0}}{2}\right)
+	\label{eq:exp}
 \end{equation}
 
 \subsection{Flat universe}
@@ -136,12 +149,14 @@ We now turn to non-flat universe geometries ($\Omega_{TOT,0} $ is a free paramet
 \end{figure}
 
 \subsection{Dark energy models}
-When fitting for dark energy models there are two "interesting" parameters that we are manually fitting for: $\Omega_{M,0}$ and $w$. This means that it is necessary to also assume that the universe is flat, since we can not fit all four parameters at the same time. This is because the parameters are degenerate with each other. But instead of directly fixing $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$, we can use the data from the microwave bacground observations, to further constrain the fit. The WMAP data predicts:
+When fitting for dark energy models there are two "interesting" parameters that we are manually fitting for: $\Omega_{M,0}$ and $w$. The four parameters are degenerate with each other, meaning that we can not fit all four parameters at the same time. 
+
+Instead of assuming that the universe is perfectly flat, and directly fixing $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$, we can use the data from the microwave bacground observations, to further constrain the fit. The WMAP data predicts:
 \begin{equation}
 	\Omega_{k,0} = -0.014 \pm 0.017
 	\label{res:WMAP}
 \end{equation}
-We obtain a very similar result to the one obtained in section \ref{sec:flat}, but the error bars are slightly bigger: 
+which is consistent with a flat universe, but still allows for some uncertainty. We obtain a very similar result (see Figure \ref{fig:dark}) to the one obtained in section \ref{sec:flat}, but the error bars are slightly bigger: 
 \begin{equation}
 	\Omega_{M,0} = 0.28 \pm 0.1
 	\hspace{2cm}
@@ -154,6 +169,11 @@ We obtain a very similar result to the one obtained in section \ref{sec:flat}, b
 	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
 	\label{fig:dark}
 \end{figure}
+We use this data to find if the universe expansion is accelerating or decelerating by substituting the results \eqref{res:dark} into equation \eqref{eq:exp}. Note that the errors on the $\Omega_{M,0}$ and $\Omega_{\Lambda,0}$ results are highly corelated (Figure \ref{fig:dark}, therefore we can not reasonably just add the confidence intervals in quadrature. Instead we find that: 
+\begin{equation}
+	\Omega_{\Lambda,0} - \frac{\Omega_{M,0}}{2} = 0.60 \pm 0.15
+\end{equation}
+This means that the hypotesys that the universe's expansion is not accelerating is $4 \sigma$ away from measurements, allowing us to state that the universe's expansion is accelerating with a confidence of $1-p = 0.99997$. 
 
 \section{Conclusions and further work}
 
