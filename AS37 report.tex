@@ -6,7 +6,7 @@
 \usepackage{subcaption}
 \usepackage{siunitx}
 \usepackage{enumitem}
-\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage[a4paper,top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
@@ -38,32 +38,32 @@
 %-------------------------------------------------------------------
 
 \begin{abstract}
-In this experiment we use a sample of 115 type Ia supernovae from the Supernova Legacy Survey to analyse the expansion of the universe. We try fitting different models, finding that a flat universe is consistent with the data. Even though the SNLS does not rule out non-flat models, independent microwave background measurements strongly suggest a flat universe. By combining the SNLS data with WMAP data we can also show that the universe expansion is accelerating (p value of $3.2 \times 10^{-5}$). 
+In this experiment we use a sample of 115 type Ia supernovae from the Supernova Legacy Survey to analyse the expansion of the universe. We try fitting different models, finding that a flat universe is consistent with the data. Cosmological fits give the results: $\Omega_{M,0} = 0.26 \pm 0.04$ and $\Omega_{\Lambda,0} = 0.74 \pm 0.04$ for a flat universe. Even though the SNLS does not rule out non-flat models, independent microwave background measurements strongly suggest a flat universe. By combining the SNLS data with WMAP data, we find $\Omega_{M,0} = 0.28 \pm 0.1$ and $\Omega_{\Lambda,0} = 0.74 \pm 0.1$, and we can also show that the universe expansion is accelerating (p value of $3.2 \times 10^{-5}$). 
 \end{abstract}
 
 %-------------------------------------------------------------------
 
 \section{Introduction}
-Type Ia supernovae can be used as "standard candles", since they explode at roughly the same mass, with the same brightness. A type Ia SN is created in binary systems by a dwarf star that is consuming the other star until it is pushed over the critical limit. The limit is predicted to be at 1.44 solar masses, and is given by the point where the electron degeneracy pressure is no longer sufficient to counter gravity, but the actual mass can be larger if the star is rotating. This allows us to estimate the distance to the star. The speed of these stars relative to Earth is extracted from the red-shift of the light emitted caused by the Doppler Effect. We use this data to plot of the speed (or redness) versus time obtaining what is called a Hubble diagram, after Edwin Hubble, who discovered that there is a linear dependence between the distance to a star and its velocity. 
+Type Ia supernovae can be used as "standard candles", since they explode at roughly the same mass, with the same brightness. A type Ia supernovae is created in binary systems by a dwarf star that is consuming the other star until it is pushed over the critical limit. The limit is predicted to be at 1.44 solar masses, and is given by the point where the electron degeneracy pressure is no longer sufficient to counter gravity, but the actual mass can be larger if the star is rotating. This allows us to estimate the distance to the star. The speed of these stars relative to Earth is extracted from the red-shift of the light emitted caused by the Doppler Effect. We use this data to plot the speed (or redness) versus time obtaining what is called a Hubble diagram, after Edwin Hubble, who discovered that there is a linear dependence between the distance to a star and its velocity. 
 
-In this paper we first present the data that we are going to analyse (section \ref{sec:data}), and the theoretical model used to fit the data. In the results section we discuss four different models: a linear fit similar to Hubble's approach (\ref{sec:linear}), flat universe models (\ref{sec:flat}), non-flat universe models (\ref{sec:nonflat}) and dark energy models where we also included the WMAP estimate of space-time curvature (\ref{sec:dark}). We end with the a summary of our results and further work that can be done (\ref{sec:conclusions}). 
+In this paper we first present the data that we are going to analyse (section \ref{sec:data}), and the theoretical model used to fit the data. In the results section we discuss four different models: a linear fit similar to Hubble's approach (\ref{sec:linear}), flat universe models (\ref{sec:flat}), non-flat universe models (\ref{sec:nonflat}) and dark energy models where we also included the WMAP estimate of space-time curvature (\ref{sec:dark}). We end with the a summary of our results and suggestions for further work (\ref{sec:conclusions}). 
 
 \section{Methods}
 \subsection{Data} \label{sec:data}
-The data we are analysing consists of the measured redshift and brightness value and its error for 115 supernovae from the "Supernovae Legacy Survey" \cite{SN_legacy_survey}. This data also contains uncertainties for the brightness values, which allows us to use the $\chi^2$ statistics, but we assume that the recorded redshifts are exact. This is the same data that was used by the Nobel prise winners Saul Perlmutter, Adam Riess and Brian Schmidt, to discover of the acceleration of the expansion of the universe. 
+The data we are analysing consists of the measured redshift and brightness value and its error for 115 supernovae from the "Supernovae Legacy Survey" (SNLS) \cite{SN_legacy_survey}. This data also contains uncertainties for the brightness values, which allows us to use the $\chi^2$ statistics, but we assume that the recorded redshifts are exact. This is the same data that was used by the Nobel prize winners Saul Perlmutter, Adam Riess and Brian Schmidt, to discover of the acceleration of the expansion of the universe. 
 
-The SNLS data is combined with data from the Wilkinson Microwave Anisotropy Probe \cite{WMAP} in order to fit a dark energy model. The data from the microwave backround radiation is used as an independent measurement of the curvature of space-time providing the value of $\Omega_{k,0}  = -0.014 \pm 0.017$.
+The SNLS data is combined with data from the Wilkinson Microwave Anisotropy Probe (WMAP) \cite{WMAP} in order to fit a dark energy model. The data from the microwave background radiation is used as an independent measurement of the curvature of space-time providing the value of $\Omega_{k,0}  = -0.014 \pm 0.017$.
 
 
 \subsection{Statistical methods} \label{sec:stats}
-The SNLS data we are using comes with uncertanties on the brightness of the observed supernovae. This allows us to use the goodness-of-fit statistic $\chi^2$:
+The SNLS data we are using comes with uncertainties on the brightness of the observed supernovae. This allows us to use the goodness-of-fit statistic $\chi^2$:
 \begin{equation}
 	\chi^2 = \sum \left(\frac{y_i - \hat y_i}{\sigma_i}\right)^2
 	\label{eq:chisq}
 \end{equation}
 where $y_i$ is the $i^{\mathrm{th}}$ measured value with the corresponding uncertainty $\sigma_i$ and $\hat y_i$ is the model's prediction. In general we expect that a model that fits the data well would have $\chi^2 \approx n - p$, where $n$ is the number of data points and $p$ is the number of parameters. Clearly, the best fitting set of parameters are obtained when $\chi^2$ is at its minimum. 
 
-The confidence interval for a parameter considered "interesting" is obtained by changing the parameter until the $\chi^2$ value increases by a certain ammount. for one free parameter $\Delta \chi^2 = 1$ corresponds to the 68\% interval. While we do this, the other "uninteresting" parameters are free to vary such that $\chi^2$ is minimised. This is ok to do as long as the measurement errors are normally distributed (see section \ref{sec:flat}. 
+The confidence interval for a parameter considered "interesting" is obtained by changing the parameter until the $\chi^2$ value increases by a certain amount. For one free parameter, $\Delta \chi^2 = 1$ corresponds to the 68\% confidence interval. The other "uninteresting" parameters are free to vary such that $\chi^2$ is minimised. Using this method to determine the confidence intervals is possible here because the measurement errors are normally distributed (see section \ref{sec:flat}). 
 
 \subsection{Friedmann equation}
 In this experiment we assume that the universe is uniform and isotropic \cite{AS37_lab_script}, which allows us to write the Friedmann equation: 
@@ -76,7 +76,8 @@ where $H(a)$ is the Hubble parameter, $a$ is the scale factor, which is defined 
 	1 = \Omega_M +\Omega_k + \Omega_\Lambda
 	\label{eq:main}
 \end{equation}
-Note that we can use the Friedmann equation to determine if the universe's expansion is accelerating or decelerating. By multiplying equation \eqref{eq:Friedmann} by $a^2$ and then differentiating we obtain: 
+where $\Omega_M = 8 \pi G \rho / 3 H^2$, $\Omega_k = - k c^2 / a^2 H^2$ and $\Omega_\Lambda = \Lambda / 3 H^2$ are the three cosmological parameters corresponding to the contributions to the expansion of the universe of normal matter, curvature of space and dark matter, respectively. Since the scale factor $a$ is a function of time, the $\Omega$ quantities will also be functions of time. 
+Note that we can use the Friedmann equation to determine if the expansion of the universe is accelerating or decelerating. By multiplying equation \eqref{eq:Friedmann} by $a^2$ and then differentiating we obtain: 
 \begin{equation}
 	2 \ddot{a} \dot{a} = -\frac{8 \pi G M}{3 a^2} \dot{a} + \frac{\Lambda 2 a}{3}  \dot{a}
 \end{equation}
@@ -89,24 +90,23 @@ For the present epoch, we have $a = 1$:
 	\ddot{a}_{\mathrm{present}} = H^2 \left(\Omega_{\Lambda,0} - \frac{\Omega_{M,0}}{2}\right)
 	\label{eq:exp}
 \end{equation}
-
+where $\Omega_{\Lambda,0}$ and $\Omega_{M,0}$ are defined at the current epoch. 
 %\subsection{Flat universe}
-It can be easily seen that if the universe is flat ($k = 0$), meaning that Euclidian geometry applies, or equivalently the angles of any triangle with the sides defined by light rays add up to $180^\circ$, then: 
+It can be easily seen (from equation \eqref{eq:main}) that if the universe is flat ($k = 0$), meaning that Euclidian geometry applies, or equivalently the angles of any triangle with the sides defined by light rays add up to $180^\circ$, then: 
 \begin{equation}
 	\Omega_M + \Omega_\Lambda = 1
 	\label{eq:flat}
 \end{equation}
-
 %\subsection{Dark energy}
 The cosmological constant is a special case of a more general class of models called "dark energy" models. These models are characterised by the equation of state:
 \begin{equation}
 	P = w \rho c^2
 	\label{eq:dark}
 \end{equation}
-which relates the pressure $P$ to the energy density $\rho c^2$. $w$ is a constant which is $w = -1$ for the special case of the Cosmological Constant. Also, the value $w = 0$ corresponds to normal matter. therefore we shouldn't try to fit $w = 0$ to the data since we are already accounting for normal matter with the $\Omega_M$ term. 
+which relates the pressure $P$ to the energy density $\rho c^2$. $w$ is a constant which is $w = -1$ for the special case of the Cosmological Constant. Also, the value $w = 0$ corresponds to normal matter. Therefore we should not try to fit $w = 0$ to the data since we are already accounting for normal matter with the $\Omega_M$ term. 
 
 \subsection{The cosmological model}
-The data is being fitted to using the QDP (the Quick and Dandy Plotter) PLT software. There was another custom fitting model added to the QDP software: the "cosm" model which fits a Friedmann model to the data. This model has four parameters: the absolute magnitude to the Type 1a supernovae $AbsMag$, $\Omega_{M,0}$, $\Omega_{T,0} = \Omega_{M,0} + \Omega_{\Lambda,0}$ and the dark energy equation of state parameter $w$.
+The different statistical models were fitted to the data using the QDP (the Quick and Dandy Plotter) PLT software. There was another custom fitting model added to the QDP software: the "cosm" model which fits a Friedmann model to the data. This model has four parameters: the absolute magnitude of the Type 1a supernovae $AbsMag$, $\Omega_{M,0}$, $\Omega_{T,0} = \Omega_{M,0} + \Omega_{\Lambda,0}$ and the dark energy equation of state parameter $w$.
 
 \section{Results}
 \subsection{Linear fit} \label{sec:linear}
@@ -129,7 +129,7 @@ The linear fit has a slope clearly different than $5$, which shows that this sim
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{snls.png}
-	\caption{Type Ia supernovae data from the Supernovae Legacy Survey plotted on a Hubble diagram}
+	\caption{Type Ia supernovae data from the Supernovae Legacy Survey plotted on a Hubble diagram. Y-axis is the measured brightness $m_B$ in units of magnitudes, and the x-axis is the redshift}
 	\label{fig:snls}
 \end{figure}
 
@@ -138,20 +138,19 @@ We also investigate if this simple model can be a good fit for a range of the da
 \subsection{Flat universe models} \label{sec:flat}
 As stated before, we model a flat universe by setting $\Omega_{TOT,0} = \Omega_{M,0} + \Omega_{\Lambda,0} = 1$. We are also using the Cosmological Constant (set $w = -1$), which leaves  $\Omega_{M,0}$ and $AbsMag$ as the parameters to be fitted. We find: 
 \begin{equation}
-	\Omega_{M,0} = 0.26^{0.30}_{0.22} 
+	\Omega_{M,0} = 0.26 \pm 0.04
 	\hspace{2cm}
 	AbsMag = -19.247
 	\hspace{2cm}
 	\chi^2 = 110.9
 	\label{res:flatM}
 \end{equation}
-Note that we did not investigate what is the $1\sigma$ confidence interval for the absolute magnitude of the SNe, since this is not the parameter we are interested in. Using equation \eqref{eq:flat} we find: 
+Note that we did not investigate what is the $1\sigma$ confidence interval for the absolute magnitude of the supernovae, since this is not the parameter we are interested in. Using equation \eqref{eq:flat} we find: 
 \begin{equation}
-	\Omega_{\Lambda,0} = 0.74^{0.88}_{0.70} 
+	\Omega_{\Lambda,0} = 0.74 \pm 0.04
 	\label{res:flatL}
 \end{equation}
-We should also note that we are allowed to estimate the confidence intervals the way we do (see section \ref{sec:stats} because the uncertainties of the measurements are normally distributed. This is shown by the plot of $\chi^2$ versus the "interesting" parameter having a quadratic trend. 
-
+We should also note that we examine how $\chi^2$ changes as a function of the "interesting" parameter $\Omega_M$ (Figure \ref{fig:quad}). We find that $\chi^2$ has a quadratic trend, indicating that the uncertainties of the measurements are normally distributed. Consequently, this justifies our method of estimating the confidence intervals (see section \ref{sec:stats}).
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{quad.png}
@@ -165,7 +164,7 @@ We now turn to non-flat universe geometries ($\Omega_{TOT,0} $ is a free paramet
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{nonflat.png}
-	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$. The pair ($\Omega_\Lambda, \Omega_M$) can not be determined uniquely using only theSupernova Legacy Survey data.}
+	\caption{Supernova Legacy Survey data fitted with a non-flat universe model. The contour plot shows the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$. The pair ($\Omega_\Lambda, \Omega_M$) can not be determined uniquely using only the SNLS data.}
 	\label{fig:nonflat}
 \end{figure}
 
@@ -192,17 +191,17 @@ which is consistent with a flat universe, but still allows for some uncertainty.
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{dark.png}
-	\caption{Contour plot of the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
+	\caption{SNLS data fitted with a dark energy model with the $\Omega_k = 1 - \Omega_M - \Omega_{\Lambda}$ parameter constrained by WMAP data. Contour plot shows the 68\%, 90 \% and 99\% confidence intervals, plotted in black, red and green, respectively, for the cosmological parameters $\Omega_\Lambda$ and $\Omega_M$}
 	\label{fig:dark}
 \end{figure}
-We use this data to find if the universe expansion is accelerating or decelerating by substituting the results \eqref{res:dark} into equation \eqref{eq:exp}. Note that the errors on the $\Omega_{M,0}$ and $\Omega_{\Lambda,0}$ results are highly correlated (Figure \ref{fig:dark}, therefore we can not reasonably just add the confidence intervals in quadrature. Instead we find that: 
+We use this data to find if the universe expansion is accelerating or decelerating by substituting the results \eqref{res:dark} into equation \eqref{eq:exp}. Note that the errors on the $\Omega_{M,0}$ and $\Omega_{\Lambda,0}$ results are highly correlated (Figure \ref{fig:dark}), therefore we can not reasonably just add the confidence intervals in quadrature. Instead we find that: 
 \begin{equation}
 	\Omega_{\Lambda,0} - \frac{\Omega_{M,0}}{2} = 0.60 \pm 0.15
 \end{equation}
 This means that the hypothesis that the universe's expansion is not accelerating is $4 \sigma$ away from measurements, allowing us to state that the universe's expansion is accelerating with a confidence of $1-p = 0.99997$. 
 
 \section{Conclusions and further work} \label{sec:conclusions}
-In this experiment we showed how type Ia SNe can be used as "standard candles", allowing us to derive the distance to the supernovae. We can also use the redshift of the light coming from the SNe to determine their relative velocity to Earth. We showed that there is a range of cosmological parameters that fit this data well with a non-flat universe model. We also use an independent dataset of microwave background observations t determine that the universe is mostly flat. The combination of the two datasets allows us to determine with $99.997\%$ confidence that the expansion of the universe is accelerating. 
+In this experiment we showed how type Ia supernovae can be used as "standard candles", allowing us to derive the distance to the supernovae. We can also use the redshift of the light coming from the supernovae to determine their relative velocity to Earth. We showed that there is a range of cosmological parameters that fit this data well with a non-flat universe model. We also use an independent dataset of microwave background observations to determine that the universe is mostly flat. The combination of the two datasets allows us to determine with $99.997\%$ confidence that the expansion of the universe is accelerating. 
 
 Future work could focus on refining the measurements of cosmological parameters by incorporating more recent and comprehensive datasets of type Ia supernovae. Additionally, improving the calibration of supernova luminosities and reducing systematic uncertainties will enhance the precision of distance measurements. A more complex statistical model, taking into account uncertainties in both brightness and redshift measurements would also better capture the real world. Expanding the analysis to include data from other cosmological probes, such as baryon acoustic oscillations (BAO) and gravitational lensing, could provide a more robust understanding of the universe's expansion history. Such independent measurements would be highly valuable in verifying the validity of the models presented in this report. 
 
